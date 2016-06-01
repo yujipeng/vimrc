@@ -121,6 +121,29 @@ set foldcolumn=1
 " show line number
 set nu
 
+" set how to use mouse in vim  : n,v,i,c,h,a,r,A
+set mouse=
+
+" set fileformats
+set fileformats=unix,dos,mac
+nmap <leader>fd :se fileformat=dos<CR>
+nmap <leader>fu :se fileformat=unix<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim foldmethod
+" set default foldmethod indent
+" zi   打开关闭折叠
+" zc   折叠
+" zC   对所在范围内所有嵌套的折叠点进行折叠
+" zo   展开折叠
+" zO   对所在范围内所有嵌套的折叠点展开
+" [z   到当前打开的折叠的开始处。
+" ]z   到当前打开的折叠的末尾处。
+" zj   向下移动。到达下一个折叠的开始处。关闭的折叠也被计入。
+" zk   向上移动到前一折叠的结束处。关闭的折叠也被计入。
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set foldmethod=indent
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
