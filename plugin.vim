@@ -83,10 +83,10 @@ map <leader>fb :CtrlPBuffer<cr>
 " => PDV - PHP Documentor for VIM - 2
 " => https://github.com/tobyS/pdv
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'tobyS/pdv'
-let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
-nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
-nnoremap <buffer> <C-p> :call pdv#DocumentCurrentLine()<CR>
+" Plugin 'tobyS/pdv'
+" let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
+" nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
+" nnoremap <buffer> <C-p> :call pdv#DocumentCurrentLine()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim taglist
