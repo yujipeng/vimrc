@@ -2,6 +2,12 @@
 
 REAL_PARH=$(cd `dirname $0`; pwd)"/"
 
+
+if [ ! -d "~/.vim" ]; then
+    mkdir ~/.vim 
+fi
+
+
 # 基本配置
 cp $REAL_PARH"basic.vim" ~/.vim/
 
