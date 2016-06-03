@@ -31,5 +31,5 @@
 
 * 关于vim的管理管理，按照https://github.com/VundleVim/Vundle.vim 进行操作。
 
-    > 关于VundleVim 的自身配置调用文件，在 vundle.vim 文件中
-    > 真正的plugin管理，以及相应的插件配置，在 plugin.vim 文件中
+    1. 关于VundleVim 的自身配置调用文件，在 vundle.vim 文件中
+    2. 真正的plugin管理，以及相应的插件配置，在 plugin.vim 文件中
