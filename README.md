@@ -2,11 +2,9 @@
 
 ## 安装说明
 
-* 使用 install_basic_vimrc.sh  安装得到配置 == basic.vim
+* 执行 ./install_basic_vimrc.sh  安装得到配置 == basic.vim
 
-
-
-* 使用 install_awesome_vimrc.sh  安装得到配置如下：
+* 执行 ./install_awesome_vimrc.sh  安装得到配置如下：
 
         " 基本配置
         source ~/.vim/basic.vim
@@ -33,3 +31,4 @@
 
     1. 关于VundleVim 的自身配置调用文件，在 vundle.vim 文件中
     2. 真正的plugin管理，以及相应的插件配置，在 plugin.vim 文件中
+    3. 在plugin.vim中管理的插件可以按照自己的习惯任意调整
