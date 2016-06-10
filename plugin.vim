@@ -13,7 +13,9 @@
 "    -> CtrlP
 "    -> PDV 
 "    -> taglist
-"    -> bufExplorer
+"    -> phpcomplete
+"    -> vim-multiple-cursors
+"    -> syntax-check
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -86,7 +88,7 @@ let g:ctrlp_cmd = 'CtrlP'
 " => https://github.com/vim-scripts/taglist.vim
 " => can use with ctags  http://ctags.sourceforge.net/ 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'taglist.vim'
+Plugin 'vim-scripts/taglist.vim'
 let Tlist_File_Fold_Auto_Close=1
 let Tlist_Inc_Winwidth=0
 let Tlist_Ctags_Cmd="/usr/bin/ctags"
@@ -94,31 +96,59 @@ let Tlist_Show_One_File=1
 map <leader>t :TlistToggle<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => PDV - PHP Documentor for VIM - 2
-" => https://github.com/tobyS/pdv
-" => base :  https://github.com/SirVer/ultisnips
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Track the engine.
-Plugin 'SirVer/ultisnips'
-" Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
-Plugin 'tobyS/pdv'
-let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
-nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
-" nnoremap <buffer> <C-p> :call pdv#DocumentCurrentLine()<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
 " => https://github.com/terryma/vim-multiple-cursors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'terryma/vim-multiple-cursors'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => shawncplus/phpcomplete.vim
+" => https://github.com/shawncplus/phpcomplete.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'shawncplus/phpcomplete.vim'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => scrooloose/syntastic
+" => https://github.com/scrooloose/syntastic
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'scrooloose/syntastic'
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => PDV - PHP Documentor for VIM
+" => https://github.com/vim-scripts/PDV--phpDocumentor-for-Vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'vim-scripts/PDV--phpDocumentor-for-Vim'
+inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
+nnoremap <C-P> :call PhpDocSingle()<CR> 
+vnoremap <C-P> :call PhpDocRange()<CR> 
+
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" " => PDV - PHP Documentor for VIM - 2
+" " => https://github.com/tobyS/pdv
+" " => base :  https://github.com/SirVer/ultisnips
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" " Track the engine.
+" Plugin 'SirVer/ultisnips'
+" " Snippets are separated from the engine. Add this if you want them:
+" Plugin 'honza/vim-snippets'
+" " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<c-b>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" " If you want :UltiSnipsEdit to split your window.
+" let g:UltiSnipsEditSplit="vertical"
+
+" Plugin 'tobyS/pdv'
+" let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
+" nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
+" " nnoremap <buffer> <C-p> :call pdv#DocumentCurrentLine()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => YouCompleteMe A code-completion engine for Vim 
