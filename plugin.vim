@@ -125,6 +125,7 @@ let g:syntastic_check_on_wq = 0
 " => https://github.com/vim-scripts/PDV--phpDocumentor-for-Vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'vim-scripts/PDV--phpDocumentor-for-Vim'
+" let g:pdv_cfg_Author = "Jeep YU <jeep.yujipeng@gmail.com>"
 inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
 nnoremap <C-P> :call PhpDocSingle()<CR> 
 vnoremap <C-P> :call PhpDocRange()<CR> 
