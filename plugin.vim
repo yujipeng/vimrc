@@ -11,14 +11,16 @@
 "    -> Nerd Tree
 "    -> Git gutter
 "    -> CtrlP
-"    -> PDV 
 "    -> taglist
-"    -> phpcomplete
 "    -> vim-multiple-cursors
-"    -> syntax-check
+"    以下部分已经屏蔽
+"    -> phpcomplete
+"    -> PDV 
+"    -> syntax-check : syntastic
+"    -> vim-javacomplete2
+"    -> vim-javascript
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -28,6 +30,7 @@
 Plugin 'tpope/vim-commentary'
 autocmd FileType vim setlocal commentstring=\"\ %s
 autocmd FileType php setlocal commentstring=//\ %s
+autocmd FileType java setlocal commentstring=//\ %s
 autocmd FileType nginx setlocal commentstring=#\ %s
 autocmd FileType apache setlocal commentstring=#\ %s
 autocmd FileType javascript setlocal commentstring=#\ %s
@@ -105,30 +108,30 @@ Plugin 'terryma/vim-multiple-cursors'
 " => shawncplus/phpcomplete.vim
 " => https://github.com/shawncplus/phpcomplete.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'shawncplus/phpcomplete.vim'
+" Plugin 'shawncplus/phpcomplete.vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => scrooloose/syntastic
 " => https://github.com/scrooloose/syntastic
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'scrooloose/syntastic'
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" Plugin 'scrooloose/syntastic'
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => PDV - PHP Documentor for VIM
 " => https://github.com/vim-scripts/PDV--phpDocumentor-for-Vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'vim-scripts/PDV--phpDocumentor-for-Vim'
+" Plugin 'vim-scripts/PDV--phpDocumentor-for-Vim'
 " let g:pdv_cfg_Author = "Jeep YU <jeep.yujipeng@gmail.com>"
-inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
-nnoremap <C-P> :call PhpDocSingle()<CR> 
-vnoremap <C-P> :call PhpDocRange()<CR> 
+" inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
+" nnoremap <C-P> :call PhpDocSingle()<CR> 
+" vnoremap <C-P> :call PhpDocRange()<CR> 
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " " => PDV - PHP Documentor for VIM - 2
@@ -156,4 +159,23 @@ vnoremap <C-P> :call PhpDocRange()<CR>
 " => https://github.com/Valloric/YouCompleteMe
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin 'Valloric/YouCompleteMe'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim javacomplete2 => artur-shaik/vim-javacomplete2
+" => https://github.com/artur-shaik/vim-javacomplete2
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin 'artur-shaik/vim-javacomplete2'
+" autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim javascript=> pangloss/vim-javascript 
+" => https://github.com/pangloss/vim-javascript
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin 'pangloss/vim-javascript'
+" let g:javascript_plugin_jsdoc = 1
+" let g:javascript_plugin_ngdoc = 1
+" let g:javascript_plugin_flow = 1
+" set foldmethod=syntax
 
