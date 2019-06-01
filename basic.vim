@@ -151,7 +151,8 @@ set foldmethod=indent
 syntax enable 
 
 try
-    colorscheme desert
+    " colorscheme desert
+    colorscheme darkblue
 catch
 endtry
 
